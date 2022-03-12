@@ -1,9 +1,22 @@
-import react from '@vitejs/plugin-react'
+import path from 'path'
+import { defineConfig } from 'vite'
+
+// plugins
 import ssr from 'vite-plugin-ssr/plugin'
-import { UserConfig } from 'vite'
+import reactRefresh from '@vitejs/plugin-react-refresh'
+import WindiCSS from 'vite-plugin-windicss'
 
-const config: UserConfig = {
-  plugins: [react(), ssr()],
-}
+export default defineConfig({
+  resolve: {
+    alias: {
+      'src/': `${path.resolve(__dirname, 'src')}/`,
+    },
+  },
+  plugins: [
+    reactRefresh(),
+    ssr(),
 
-export default config
+    // https://github.com/antfu/vite-plugin-windicss
+    WindiCSS(),
+  ],
+})

@@ -1,3 +1,5 @@
+import 'virtual:windi.css'
+
 import ReactDOM from 'react-dom'
 import React from 'react'
 import { getPage } from 'vite-plugin-ssr/client'
@@ -16,6 +18,6 @@ async function hydrate() {
     <PageShell pageContext={pageContext}>
       <Page {...pageProps} />
     </PageShell>,
-    document.getElementById('page-view'),
+    document.getElementById('page-view')
   )
 }
