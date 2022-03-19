@@ -1,3 +1,4 @@
+import 'uno.css'
 import * as ReactDOMClient from 'react-dom/client'
 import React from 'react'
 import { getPage } from 'vite-plugin-ssr/client'
