@@ -1,5 +1,3 @@
-import 'virtual:windi.css'
-
 import * as ReactDOMClient from 'react-dom/client'
 import React from 'react'
 import { getPage } from 'vite-plugin-ssr/client'
@@ -14,8 +12,9 @@ async function hydrate() {
   // instead of `getPage()`, see https://vite-plugin-ssr.com/useClientRouter
   const pageContext = await getPage<PageContextBuiltInClient & PageContext>()
   const { Page, pageProps } = pageContext
-  const container = document.getElementById('page-view')
-  const root = ReactDOMClient.hydrateRoot(
+  const container: any = document.getElementById('page-view')
+
+  ReactDOMClient.hydrateRoot(
     container,
     <PageShell pageContext={pageContext}>
       <Page {...pageProps} />

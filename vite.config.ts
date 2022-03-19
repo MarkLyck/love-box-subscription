@@ -3,8 +3,9 @@ import { defineConfig } from 'vite'
 
 // plugins
 import ssr from 'vite-plugin-ssr/plugin'
-import reactRefresh from '@vitejs/plugin-react-refresh'
-import WindiCSS from 'vite-plugin-windicss'
+import react from '@vitejs/plugin-react'
+import Unocss from 'unocss/vite'
+import { presetAttributify, presetUno } from 'unocss'
 
 export default defineConfig({
   resolve: {
@@ -13,10 +14,10 @@ export default defineConfig({
     },
   },
   plugins: [
-    reactRefresh(),
+    react(),
     ssr(),
-
-    // https://github.com/antfu/vite-plugin-windicss
-    WindiCSS(),
+    Unocss({
+      presets: [presetAttributify(), presetUno()],
+    }),
   ],
 })
