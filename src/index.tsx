@@ -1,5 +1,12 @@
-const index = () => {
-  return <div>Test</div>
-}
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
 
-export default index
+import 'uno.css'
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+)
