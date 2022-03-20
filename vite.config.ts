@@ -14,10 +14,10 @@ export default defineConfig({
     },
   },
   plugins: [
-    react(),
-    ssr(),
     Unocss({
       presets: [presetAttributify(), presetUno()],
     }),
+    react(),
+    ssr(),
   ],
 })
