@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "strict": true,
-    "module": "ES2020",
+    "target": "ESNext",
+    "module": "esnext",
     "moduleResolution": "Node",
-    "target": "ES2017",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "types": ["vite/client"],
     "jsx": "react",
