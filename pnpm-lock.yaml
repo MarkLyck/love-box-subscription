@@ -3,7 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@types/node': ^17.0.21
   '@types/react': 17.0.41
-  '@types/react-dom': 17.0.14
+  '@types/react-dom': 17.0.18
   '@vitejs/plugin-react': ^1.2.0
   gitmoji-cli: 4.10.0
   prettier: 2.6.0
@@ -15,13 +15,13 @@ specifiers:
   vite: 2.8.6
 
 dependencies:
-  react: 18.0.0-rc.2
-  react-dom: 18.0.0-rc.2_react@18.0.0-rc.2
+  react: 18.0.0-rc.3
+  react-dom: 18.0.0-rc.3_react@18.0.0-rc.3
 
 devDependencies:
   '@types/node': 17.0.21
   '@types/react': 17.0.41
-  '@types/react-dom': 17.0.14
+  '@types/react-dom': 17.0.18
   '@vitejs/plugin-react': 1.2.0
   gitmoji-cli: 4.10.0
   prettier: 2.6.0
@@ -226,6 +226,8 @@ packages:
     resolution: {integrity: sha512-BoHhDJrJXqcg+ZL16Xv39H9n+AqJ4pcDrQBGZN+wHxIysrLZ3/ECwCBUch/1zUNhnsXULcONU3Ei5Hmkfk6kiQ==}
     engines: {node: '>=6.0.0'}
     hasBin: true
+    dependencies:
+      '@babel/types': 7.17.0
     dev: true
 
   /@babel/plugin-syntax-jsx/7.16.7_@babel+core@7.17.8:
@@ -400,6 +402,12 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
+  /@types/keyv/3.1.4:
+    resolution: {integrity: sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg==}
+    dependencies:
+      '@types/node': 17.0.21
+    dev: true
+
   /@types/minimatch/3.0.5:
     resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==}
     dev: true
@@ -420,8 +428,8 @@ packages:
     resolution: {integrity: sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==}
     dev: true
 
-  /@types/react-dom/17.0.14:
-    resolution: {integrity: sha512-H03xwEP1oXmSfl3iobtmQ/2dHF5aBHr8aUMwyGZya6OW45G+xtdzmq6HkncefiBt5JU8DVyaWl/nWZbjZCnzAQ==}
+  /@types/react-dom/17.0.18:
+    resolution: {integrity: sha512-rLVtIfbwyur2iFKykP2w0pl/1unw26b5td16d5xMgp7/yjTHomkyxPYChFoCr/FtEX1lN9wY6lFj1qvKdS5kDw==}
     dependencies:
       '@types/react': 17.0.41
     dev: true
@@ -432,6 +440,12 @@ packages:
       '@types/prop-types': 15.7.4
       '@types/scheduler': 0.16.2
       csstype: 3.0.11
+    dev: true
+
+  /@types/responselike/1.0.0:
+    resolution: {integrity: sha512-85Y2BjiufFzaMIlvJDvTTB8Fxl2xfLo4HgmHzVBz08w4wDePCTjYw66PdrolO0kzli3yam/YCgRufyo1DdQVTA==}
+    dependencies:
+      '@types/node': 17.0.21
     dev: true
 
   /@types/scheduler/0.16.2:
@@ -1637,6 +1651,8 @@ packages:
     dependencies:
       '@sindresorhus/is': 0.14.0
       '@szmarczak/http-timer': 1.1.2
+      '@types/keyv': 3.1.4
+      '@types/responselike': 1.0.0
       cacheable-request: 6.1.0
       decompress-response: 3.3.0
       duplexer3: 0.1.4
@@ -2546,13 +2562,13 @@ packages:
       strip-json-comments: 2.0.1
     dev: true
 
-  /react-dom/18.0.0-rc.2_react@18.0.0-rc.2:
-    resolution: {integrity: sha512-EvLlgtc/wAzAIXX5V1gnLgeK9B3wAdEGmmrXXKRoRzXM0RNNwGN+6OxQPBlACiGDUYYEOk+GT8f6u+gNWDnTtg==}
+  /react-dom/18.0.0-rc.3_react@18.0.0-rc.3:
+    resolution: {integrity: sha512-WPlWXyzZp22+uGUNNNoZnAPWAcr5sSeaEj0S1lLqKc2DkovKugJl1VgnBfk6gQX9llTb5/qkRNVtW31WdhG8iA==}
     peerDependencies:
-      react: ^18.0.0-rc.2
+      react: ^18.0.0-rc.3
     dependencies:
       loose-envify: 1.4.0
-      react: 18.0.0-rc.2
+      react: 18.0.0-rc.3
       scheduler: 0.21.0-rc.2-next-581f0c42e-20220310
     dev: false
 
@@ -2561,8 +2577,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /react/18.0.0-rc.2:
-    resolution: {integrity: sha512-q32FWyA5HvqfRCN0ZOk0gUOpzJGPPh8fqbk8DYQuh4DyiGWiNgN/BxMq3/ScY0SlwDB1HOAMU1lUgtaOr5p2Ng==}
+  /react/18.0.0-rc.3:
+    resolution: {integrity: sha512-2NzSty8Dtq+5lnOdnP5MNA2iSn51PmvAuqgHLmUoXU3ohEtL+r0a1Az1iWvurMBIqW9cz49fJ42AM/+ziPmlWg==}
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
